@@ -1,0 +1,27 @@
+Debufos:
+4 grupos:
+-XP
+-Movimiento
+-Vida y comida
+-Armadura
+
+Bufos:
+4 grupos:
+-XP
+-Movimiento
+-Vida y comida
+-Armadura
+
+Debufos cada "x" tiempo, si completas una "mission" para arreglar el debufo consigues un bufo de otra categoria y se quita el debufo
+Bufo se consigue al completar la mision del debufo
+No tienes porque hacer la mision del debufo.
+
+Personaje: Glich
+El antagonista de corrupted hardcore
+
+Vidas 3, pero al morir pierdes todos los objetos.
+
+Se permite el grifeo y robar en casas ajenas.
+Para conseguir que la gente sea nomada se implementaran Mochilas.
+Recordamos que si mueres pierdes todo hasta las mochilas.
+
