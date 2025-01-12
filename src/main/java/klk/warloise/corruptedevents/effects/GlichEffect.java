@@ -8,13 +8,12 @@ public class GlichEffect extends MobEffect {
     public GlichEffect(MobEffectCategory category, int color) {
         super(category, color);
     }
-
-
+    
     @Override
     public void applyEffectTick(LivingEntity entity, int amplifier) {
         // Aquí defines lo que hace el efecto cada "tick".
         //Quiero que me haga la pantalla el efecto de glich
-        
+
     }
 
     @Override
