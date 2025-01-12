@@ -1,6 +1,7 @@
 package klk.warloise.corruptedevents;
 
 import com.mojang.logging.LogUtils;
+import klk.warloise.corruptedevents.registry.ModEffects;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.food.FoodProperties;
@@ -46,6 +47,7 @@ public class Corruptedevents {
         CREATIVE_MODE_TABS.register(modEventBus);
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
+        ModEffects.MOB_EFFECTS.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
