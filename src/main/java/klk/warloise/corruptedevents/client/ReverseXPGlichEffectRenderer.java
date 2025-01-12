@@ -10,7 +10,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber(value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.FORGE)
-public class GlichEffectRenderer {
+public class ReverseXPGlichEffectRenderer {
     private static final Minecraft MC = Minecraft.getInstance();
     private static long lastTriggerTime = 0; // Momento en que el glitch comenzó a mostrarse.
     private static final int GLITCH_INTERVAL = 15 * 1000; // 30 segundos en milisegundos.
@@ -21,7 +21,7 @@ public class GlichEffectRenderer {
         if (MC.player == null || MC.level == null) return;
 
         // Verificar si el jugador tiene el efecto activo.
-        MobEffectInstance effectInstance = MC.player.getEffect(ModEffects.GLICHEFFECT.get());
+        MobEffectInstance effectInstance = MC.player.getEffect(ModEffects.REVERSE_XP_GLICH.get());
         if (effectInstance != null) {
             long currentTime = System.currentTimeMillis(); // Tiempo actual en milisegundos.
 
