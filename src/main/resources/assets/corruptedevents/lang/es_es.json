@@ -1,5 +1,6 @@
 {
   "effect.corruptedevents.glich": "Glich",
   "effect.corruptedevents.reverse_xp_glitch": "(-)XP",
-  "effect.corruptedevents.inverted_controls": "Teclas Invertidas"
+  "effect.corruptedevents.inverted_controls": "Teclas Invertidas",
+  "effect.corruptedevents.hurt_xp": "Xp x Daño"
 }
