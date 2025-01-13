@@ -16,5 +16,7 @@ public class ModEffects {
             () -> new GlichEffect(MobEffectCategory.BENEFICIAL, 0x98D982)); // Color del efecto.
     public static final RegistryObject<MobEffect> REVERSE_XP_GLICH = MOB_EFFECTS.register("reverse_xp_glitch",
             () -> new ReverseXPGlichEffect(MobEffectCategory.HARMFUL, 0xFF4500)); // Color naranja.
+    public static final RegistryObject<MobEffect> INVERTED_CONTROLS = MOB_EFFECTS.register("inverted_controls",
+            () -> new ReverseXPGlichEffect(MobEffectCategory.HARMFUL, 0xFF3450)); 
 
 }
