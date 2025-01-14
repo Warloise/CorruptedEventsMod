@@ -37,7 +37,7 @@ public class GlichEffectRenderer {
         }
     }
 
-    private static void renderGlichOverlay(GuiGraphics graphics, int amplifier) {
+    public static void renderGlichOverlay(GuiGraphics graphics, int amplifier) {
         int width = MC.getWindow().getGuiScaledWidth();
         int height = MC.getWindow().getGuiScaledHeight();
 
@@ -45,7 +45,7 @@ public class GlichEffectRenderer {
 
         for (int i = 0; i < numberOfLines; i++) {
             // Calcular posición y tamaño de la línea.
-            int startX = (int) (width * (Math.random() * 1));; // Todas las líneas comienzan desde la izquierda.
+            int startX = (int) (width * (Math.random() * 1)); // Todas las líneas comienzan desde la izquierda.
             int endX = (int) (width * (0.3 + Math.random() * 0.7)); // Longitud de la línea (30%-100% del ancho de la pantalla).
             int posY = (int) (Math.random() * height); // Posición vertical aleatoria.
             int thickness = 2 + (int) (Math.random() * 4); // Grosor de la línea (2-5 píxeles).

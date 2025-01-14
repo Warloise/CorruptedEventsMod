@@ -2,5 +2,6 @@
   "effect.corruptedevents.glich": "Glich",
   "effect.corruptedevents.reverse_xp_glitch": "(-)XP",
   "effect.corruptedevents.inverted_controls": "Teclas Invertidas",
-  "effect.corruptedevents.hurt_xp": "Xp x Daño"
+  "effect.corruptedevents.hurt_xp": "Xp x Daño",
+  "death.attack.glitch": "%1$s ha sido finalizado por Glitch."
 }
