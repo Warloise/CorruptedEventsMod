@@ -2,6 +2,7 @@ package klk.warloise.corruptedevents.registry;
 
 import klk.warloise.corruptedevents.Corruptedevents;
 import klk.warloise.corruptedevents.effects.GlichEffect;
+import klk.warloise.corruptedevents.effects.HalfLifeEffect;
 import klk.warloise.corruptedevents.effects.RedScreenEffect;
 import klk.warloise.corruptedevents.effects.ReverseXPGlichEffect;
 import net.minecraft.world.effect.MobEffect;
@@ -20,5 +21,8 @@ public class ModEffects {
             () -> new ReverseXPGlichEffect(MobEffectCategory.HARMFUL, 0xFF4500)); // Color naranja.
     public static final RegistryObject<MobEffect> RED_SCREEN_EFFECT = MOB_EFFECTS.register("red_screen",
             () -> new RedScreenEffect(MobEffectCategory.NEUTRAL, 0xFF0000)); // Color base del efecto rojo.
+    public static final RegistryObject<MobEffect> HALF_LIFE_GLICH = MOB_EFFECTS.register("half_life",
+            () -> new HalfLifeEffect(MobEffectCategory.HARMFUL, 0xFF0000)); // Color base del efecto rojo.
+
 
 }
