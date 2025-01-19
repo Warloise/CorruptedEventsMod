@@ -4,5 +4,6 @@
   "effect.corruptedevents.inverted_controls": "Teclas Invertidas",
   "effect.corruptedevents.hurt_xp": "Xp x Daño",
   "effect.corruptedevents.blind_movement": "Escondite Inglés",
+  "effect.corruptedevents.damage_lower": "Daño a la Mitad",
   "death.attack.glitch": "%1$s ha sido finalizado por Glitch."
 }
