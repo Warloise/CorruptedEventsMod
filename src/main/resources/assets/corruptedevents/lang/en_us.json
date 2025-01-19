@@ -4,5 +4,6 @@
   "effect.corruptedevents.red_screen": "Red Screen",
   "effect.corruptedevents.half_life": "Half Life",
   "effect.corruptedevents.half_hunger": "Half Hunger",
-  "effect.corruptedevents.hide_life_and_hunger": "Non Comunications"
+  "effect.corruptedevents.hide_life_and_hunger": "Non Comunications",
+  "effect.corruptedevents.durability_drain": "Durability Drain"
 }
