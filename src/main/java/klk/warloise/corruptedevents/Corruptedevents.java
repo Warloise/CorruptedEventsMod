@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import klk.warloise.corruptedevents.registry.ModEffects;
 import klk.warloise.corruptedevents.client.BlackAndWhiteModeRenderer;
 import klk.warloise.corruptedevents.client.CRTRenderer;
+import klk.warloise.corruptedevents.events.PvpHandler;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -44,7 +45,7 @@ public class Corruptedevents {
 
     private void commonSetup(final FMLCommonSetupEvent event) {
         // Some common setup code
-        LOGGER.info("CorruptedEventsMod Hello");
+        LOGGER.info("CorruptedEventsMod - Common setup");
     }
 
     // Add the example block item to the building blocks tab
@@ -56,7 +57,7 @@ public class Corruptedevents {
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
         // Do something when the server starts
-        LOGGER.info("Corrupted Events hello!");
+        LOGGER.info("Corrupted Events - Servidor");
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
@@ -66,9 +67,21 @@ public class Corruptedevents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             // Some client setup code
-            LOGGER.info("Corrupted Events hello!");
+            LOGGER.info("Corrupted Events - Cliente");
             MinecraftForge.EVENT_BUS.register(new BlackAndWhiteModeRenderer());
             MinecraftForge.EVENT_BUS.register(new CRTRenderer());
+        }
+    }
+
+    // Register server-side event handlers
+    @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.DEDICATED_SERVER)
+    public static class ServerModEvents {
+
+        @SubscribeEvent
+        public static void onServerSetup(FMLCommonSetupEvent event) {
+            // Some server setup code
+            LOGGER.info("Corrupted Events server setup!");
+            MinecraftForge.EVENT_BUS.register(new PvpHandler());
         }
     }
 }
