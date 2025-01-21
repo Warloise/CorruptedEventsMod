@@ -2,6 +2,7 @@ package klk.warloise.corruptedevents;
 
 import com.mojang.logging.LogUtils;
 import klk.warloise.corruptedevents.registry.ModEffects;
+import klk.warloise.corruptedevents.client.BlackAndWhiteModeRenderer;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -65,6 +66,7 @@ public class Corruptedevents {
         public static void onClientSetup(FMLClientSetupEvent event) {
             // Some client setup code
             LOGGER.info("Corrupted Events hello!");
+            MinecraftForge.EVENT_BUS.register(new BlackAndWhiteModeRenderer());
         }
     }
 }
