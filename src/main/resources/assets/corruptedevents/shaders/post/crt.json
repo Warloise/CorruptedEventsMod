@@ -1,16 +1,16 @@
 {
     "targets": [
-        "swap"
+            "swap"
     ],
     "passes": [
         {
-            "name": "corruptedevents:pixelate",
+            "name": "corruptedevents:crt",
             "intarget": "minecraft:main",
             "outtarget": "swap",
             "uniforms": [
                 {
-                    "name": "PixelSize",
-                    "values": [ 500 ]
+                    "name": "Time",
+                    "values": [ 6.28318 ]
                 }
             ]
         },

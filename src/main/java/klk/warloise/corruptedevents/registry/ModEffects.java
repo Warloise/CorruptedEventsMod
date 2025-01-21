@@ -27,4 +27,6 @@ public class ModEffects {
             () -> new BlackAndWhiteModeEffect(MobEffectCategory.HARMFUL, 0x808080)); // Color gris.
     public static final RegistryObject<MobEffect> PIXELATE = MOB_EFFECTS.register("pixelate",
             () -> new PixelateEffect(MobEffectCategory.HARMFUL, 0x808080)); // Color gris.
+     public static final RegistryObject<MobEffect> CRT = MOB_EFFECTS.register("crt",
+            () -> new CRTEffect(MobEffectCategory.HARMFUL, 0x808080)); // Color gris.
 }

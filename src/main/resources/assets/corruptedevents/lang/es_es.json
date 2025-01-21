@@ -7,5 +7,6 @@
   "effect.corruptedevents.damage_lower": "Daño / 2",
   "effect.corruptedevents.black_and_white": "Daltonismo Acromático",
   "effect.corruptedevents.pixelate": "Juego Pixelado",
+  "effect.corruptedevents.crt": "VHS.exe",
   "death.attack.glitch": "%1$s ha sido finalizado por Glitch."
 }
