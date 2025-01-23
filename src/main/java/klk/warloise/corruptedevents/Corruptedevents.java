@@ -41,26 +41,22 @@ public class Corruptedevents {
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
         ModEffects.MOB_EFFECTS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        ModAttributes.ATTRIBUTES.register(modEventBus);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-        // Some common setup code
-        LOGGER.info("CorruptedEventsMod - Common setup");
+        LOGGER.info("CorruptedEventsMod - Common");
     }
 
-    // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
 
     }
 
-    // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
-        // Do something when the server starts
-        LOGGER.info("Corrupted Events - Servidor");
+        LOGGER.info("Corrupted Events - Servidor Iniciando");
     }
 
-    // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
     @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents {
 
@@ -79,8 +75,7 @@ public class Corruptedevents {
 
         @SubscribeEvent
         public static void onServerSetup(FMLCommonSetupEvent event) {
-            // Some server setup code
-            LOGGER.info("Corrupted Events server setup!");
+            LOGGER.info("Corrupted Events - Servidor");
             MinecraftForge.EVENT_BUS.register(new PvpHandler());
         }
     }

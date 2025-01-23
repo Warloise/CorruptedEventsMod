@@ -1,0 +1,18 @@
+{
+  "providers": [
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/custom/pvp_disabled.png",
+      "ascent": 16,
+      "height": 16,
+      "chars": ["🎉"]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/custom/pvp.png",
+      "ascent": 8,
+      "height": 8,
+      "chars": ["✨"]
+    }
+  ]
+}

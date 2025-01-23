@@ -27,8 +27,8 @@ public class ModEffects {
             () -> new BlackAndWhiteModeEffect(MobEffectCategory.HARMFUL, 0x808080));
     public static final RegistryObject<MobEffect> PIXELATE = MOB_EFFECTS.register("pixelate",
             () -> new PixelateEffect(MobEffectCategory.HARMFUL, 0x808080)); 
-     public static final RegistryObject<MobEffect> CRT = MOB_EFFECTS.register("crt",
+    public static final RegistryObject<MobEffect> CRT = MOB_EFFECTS.register("crt",
             () -> new CRTEffect(MobEffectCategory.HARMFUL, 0x808080)); 
-        public static final RegistryObject<MobEffect> PVP_ACTIVATE = MOB_EFFECTS.register("pvp_activate",
+    public static final RegistryObject<MobEffect> PVP_ACTIVATE = MOB_EFFECTS.register("pvp_activate",
             () -> new PvpActivateEffect(MobEffectCategory.BENEFICIAL, 0xFF0000)); 
 }
