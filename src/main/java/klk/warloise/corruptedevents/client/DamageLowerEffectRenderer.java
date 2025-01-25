@@ -10,7 +10,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber(value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.FORGE)
-public class ReverseXPGlichEffectRenderer {
+public class DamageLowerEffectRenderer {
     private static final Minecraft MC = Minecraft.getInstance();
     private static long lastTriggerTime = 0;
     private static final int GLITCH_INTERVAL = 15 * 1000;
@@ -21,15 +21,13 @@ public class ReverseXPGlichEffectRenderer {
         if (MC.player == null || MC.level == null) return;
 
 
-        MobEffectInstance effectInstance = MC.player.getEffect(ModEffects.REVERSE_XP_GLICH.get());
+        MobEffectInstance effectInstance = MC.player.getEffect(ModEffects.DAMAGE_LOWER.get());
         if (effectInstance != null) {
             long currentTime = System.currentTimeMillis();
-
 
             if (currentTime - lastTriggerTime >= GLITCH_INTERVAL) {
                 lastTriggerTime = currentTime;
             }
-
 
             if (currentTime - lastTriggerTime < GLITCH_DURATION) {
                 renderGlichOverlay(event.getGuiGraphics(), effectInstance.getAmplifier());
@@ -44,6 +42,7 @@ public class ReverseXPGlichEffectRenderer {
         int numberOfLines = 1 + amplifier * 3;
 
         for (int i = 0; i < numberOfLines; i++) {
+            // Calcular posición y tamaño de la línea.
             int startX = (int) (width * (Math.random() * 1));;
             int endX = (int) (width * (0.3 + Math.random() * 0.7));
             int posY = (int) (Math.random() * height);
@@ -55,7 +54,7 @@ public class ReverseXPGlichEffectRenderer {
                     posY,
                     endX,
                     posY + thickness,
-                    (0xFF << 24) | (int) (Math.random() * 0xFFFFFF) 
+                    (0xFF << 24) | (int) (Math.random() * 0xFFFFFF)
             );
         }
     }

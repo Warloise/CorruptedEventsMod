@@ -1,0 +1,23 @@
+{
+    "targets": [
+            "swap"
+    ],
+    "passes": [
+        {
+            "name": "corruptedevents:crt",
+            "intarget": "minecraft:main",
+            "outtarget": "swap",
+            "uniforms": [
+                {
+                    "name": "Time",
+                    "values": [ 6.28318 ]
+                }
+            ]
+        },
+        {
+            "name": "blit",
+            "intarget": "swap",
+            "outtarget": "minecraft:main"
+        }
+    ]
+}

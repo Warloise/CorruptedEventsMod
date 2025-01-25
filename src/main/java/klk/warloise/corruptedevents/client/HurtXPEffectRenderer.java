@@ -10,7 +10,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber(value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.FORGE)
-public class ReverseXPGlichEffectRenderer {
+public class HurtXPEffectRenderer {
     private static final Minecraft MC = Minecraft.getInstance();
     private static long lastTriggerTime = 0;
     private static final int GLITCH_INTERVAL = 15 * 1000;
@@ -21,7 +21,7 @@ public class ReverseXPGlichEffectRenderer {
         if (MC.player == null || MC.level == null) return;
 
 
-        MobEffectInstance effectInstance = MC.player.getEffect(ModEffects.REVERSE_XP_GLICH.get());
+        MobEffectInstance effectInstance = MC.player.getEffect(ModEffects.HURT_XP.get());
         if (effectInstance != null) {
             long currentTime = System.currentTimeMillis();
 
@@ -49,13 +49,13 @@ public class ReverseXPGlichEffectRenderer {
             int posY = (int) (Math.random() * height);
             int thickness = 2 + (int) (Math.random() * 4);
 
-            // Dibujar la línea horizontal.
+
             graphics.fill(
-                    startX,
-                    posY,
-                    endX,
+                    startX,          
+                    posY,              
+                    endX,              
                     posY + thickness,
-                    (0xFF << 24) | (int) (Math.random() * 0xFFFFFF) 
+                    (0xFF << 24) | (int) (Math.random() * 0xFFFFFF)
             );
         }
     }
