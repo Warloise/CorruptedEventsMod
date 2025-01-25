@@ -41,7 +41,6 @@ public class Corruptedevents {
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
         ModEffects.MOB_EFFECTS.register(FMLJavaModLoadingContext.get().getModEventBus());
-        ModAttributes.ATTRIBUTES.register(modEventBus);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {

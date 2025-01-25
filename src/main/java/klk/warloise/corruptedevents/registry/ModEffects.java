@@ -31,4 +31,6 @@ public class ModEffects {
             () -> new CRTEffect(MobEffectCategory.HARMFUL, 0x808080)); 
     public static final RegistryObject<MobEffect> PVP_ACTIVATE = MOB_EFFECTS.register("pvp_activate",
             () -> new PvpActivateEffect(MobEffectCategory.BENEFICIAL, 0xFF0000)); 
+    public static final RegistryObject<MobEffect> MINI = MOB_EFFECTS.register("mini",
+            () -> new MiniEffect(MobEffectCategory.HARMFUL, 0x00FF00)); // Color verde
 }
