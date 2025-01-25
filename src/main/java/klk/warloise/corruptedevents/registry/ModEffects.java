@@ -26,6 +26,7 @@ public class ModEffects {
             () -> new HideLifeAndHungerEffect(MobEffectCategory.NEUTRAL, 0xFF0000)); // Color base del efecto rojo.
     public static final RegistryObject<MobEffect> DURABILITY_DRAIN_EFFECT_GLICH = MOB_EFFECTS.register("durability_drain",
             () -> new DurabilityDrainEffect(MobEffectCategory.NEUTRAL, 0xFF0000)); // Color base del efecto rojo.
-
+    public static final RegistryObject<MobEffect> HALF_ARMOR_EFFECT = MOB_EFFECTS.register("half_armor",
+            () -> new HalfArmorEffect(MobEffectCategory.HARMFUL, 0xFF0000)); // Color base del efecto rojo.
 
 }

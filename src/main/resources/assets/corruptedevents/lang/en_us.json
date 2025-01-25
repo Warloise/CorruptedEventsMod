@@ -5,5 +5,6 @@
   "effect.corruptedevents.half_life": "Half Life",
   "effect.corruptedevents.half_hunger": "Half Hunger",
   "effect.corruptedevents.hide_life_and_hunger": "Non Comunications",
-  "effect.corruptedevents.durability_drain": "Durability Drain"
+  "effect.corruptedevents.durability_drain": "Durability Drain",
+  "effect.corruptedevents.half_armor": "Half Armor"
 }
