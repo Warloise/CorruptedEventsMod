@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import klk.warloise.corruptedevents.registry.ModEffects;
 import klk.warloise.corruptedevents.client.BlackAndWhiteModeRenderer;
 import klk.warloise.corruptedevents.client.CRTRenderer;
+import klk.warloise.corruptedevents.effects.MiniEffect;
 import klk.warloise.corruptedevents.events.PvpHandler;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.CreativeModeTab;
@@ -77,6 +78,7 @@ public class Corruptedevents {
         public static void onServerSetup(FMLCommonSetupEvent event) {
             LOGGER.info("Corrupted Events - Servidor");
             MinecraftForge.EVENT_BUS.register(new PvpHandler());
+            MinecraftForge.EVENT_BUS.register(new MiniEffect(null, 0));
         }
     }
 }
