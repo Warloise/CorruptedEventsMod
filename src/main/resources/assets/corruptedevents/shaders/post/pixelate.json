@@ -10,7 +10,7 @@
             "uniforms": [
                 {
                     "name": "PixelSize",
-                    "values": [ 500 ]
+                    "values": [ 380 ]
                 }
             ]
         },

@@ -1,7 +1,6 @@
 {
   "effect.corruptedevents.glich": "Glich",
   "effect.corruptedevents.reverse_xp_glitch": "(-)XP",
-
   "effect.corruptedevents.red_screen": "Red Screen",
   "effect.corruptedevents.half_life": "Half Life",
   "effect.corruptedevents.half_hunger": "Half Hunger",
@@ -16,5 +15,6 @@
   "effect.corruptedevents.pixelate": "Juego Pixelado",
   "effect.corruptedevents.pvp_activate": "PvP Activo",
   "effect.corruptedevents.crt": "VHS.exe",
+  "effect.corruptedevents.mini": "Chiquitín",
   "death.attack.glitch": "%1$s ha sido finalizado por Glitch."
 }
