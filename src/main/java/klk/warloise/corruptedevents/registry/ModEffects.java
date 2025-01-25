@@ -46,4 +46,9 @@ public class ModEffects {
             () -> new PvpActivateEffect(MobEffectCategory.BENEFICIAL, 0xFF0000)); 
     public static final RegistryObject<MobEffect> MINI = MOB_EFFECTS.register("mini",
             () -> new MiniEffect(MobEffectCategory.HARMFUL, 0x00FF00)); // Color verde
+    public static final RegistryObject<MobEffect> HALF_MINING_EFFECT = MOB_EFFECTS.register("halfmining",
+            () -> new HalfMiningEffect(MobEffectCategory.HARMFUL, 0x00FF00)); // Color verde
+    public static final RegistryObject<MobEffect> REACH_BLOCK_REDUCE = MOB_EFFECTS.register("reachblochreduce",
+            () -> new ReachBlockReduceEffect(MobEffectCategory.HARMFUL, 0x00FF00)); // Color verde
+
 }

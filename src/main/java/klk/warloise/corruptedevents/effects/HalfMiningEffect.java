@@ -7,28 +7,30 @@ import net.minecraft.world.entity.ai.attributes.AttributeMap;
 import virtuoel.pehkui.api.ScaleOperations;
 import virtuoel.pehkui.api.ScaleTypes;
 
-public class MiniEffect extends MobEffect {
-    public MiniEffect(MobEffectCategory category, int color) {
+public class HalfMiningEffect extends MobEffect {
+    public HalfMiningEffect(MobEffectCategory category, int color) {
         super(category, color);
+
     }
 
     @Override
     public void applyEffectTick(LivingEntity entity, int amplifier) {
+        // Por ahora, no necesitamos lógica aquí. Todo se manejará en el cliente.
         if (!entity.level().isClientSide) {
-            ScaleTypes.BASE.getScaleData(entity).setTargetScale((float) ScaleOperations.SET.applyAsDouble(ScaleTypes.BASE.getScaleData(entity).getTargetScale(), 0.5));
+            ScaleTypes.MINING_SPEED.getScaleData(entity).setTargetScale((float) ScaleOperations.SET.applyAsDouble(ScaleTypes.MINING_SPEED.getScaleData(entity).getTargetScale(), 0.5));
         }
     }
-
     @Override
     public void removeAttributeModifiers(LivingEntity entity, AttributeMap attributeMap, int amplifier) {
         super.removeAttributeModifiers(entity, attributeMap, amplifier);
         if (!entity.level().isClientSide) {
-            ScaleTypes.BASE.getScaleData(entity).setTargetScale((float) ScaleOperations.SET.applyAsDouble(ScaleTypes.BASE.getScaleData(entity).getTargetScale(), 1));
+            ScaleTypes.MINING_SPEED.getScaleData(entity).setTargetScale((float) ScaleOperations.SET.applyAsDouble(ScaleTypes.MINING_SPEED.getScaleData(entity).getTargetScale(), 1));
         }
     }
 
     @Override
     public boolean isDurationEffectTick(int duration, int amplifier) {
-        return true;
+        // Activar cada 20 ticks (ajustable si se necesita).
+        return duration % 20 == 0;
     }
 }
