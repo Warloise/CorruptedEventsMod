@@ -1,13 +1,13 @@
 package klk.warloise.corruptedevents;
 
 import com.mojang.logging.LogUtils;
-import klk.warloise.corruptedevents.events.HurtXpHandler;
-import klk.warloise.corruptedevents.events.ReverseXPGlichEventHandler;
+import klk.warloise.corruptedevents.events.effects.HurtXpHandler;
+import klk.warloise.corruptedevents.events.effects.ReverseXPGlichEventHandler;
 import klk.warloise.corruptedevents.registry.ModEffects;
-import klk.warloise.corruptedevents.client.BlackAndWhiteModeRenderer;
-import klk.warloise.corruptedevents.client.CRTRenderer;
-import klk.warloise.corruptedevents.effects.MiniEffect;
-import klk.warloise.corruptedevents.events.PvpHandler;
+import klk.warloise.corruptedevents.client.shaders.BlackAndWhiteModeRenderer;
+import klk.warloise.corruptedevents.client.shaders.CRTRenderer;
+import klk.warloise.corruptedevents.effects.movement.MiniEffect;
+import klk.warloise.corruptedevents.events.effects.PvpHandler;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;

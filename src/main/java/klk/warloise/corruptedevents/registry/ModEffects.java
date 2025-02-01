@@ -1,7 +1,16 @@
 package klk.warloise.corruptedevents.registry;
 
 import klk.warloise.corruptedevents.Corruptedevents;
-import klk.warloise.corruptedevents.effects.*;
+import klk.warloise.corruptedevents.effects.armorandtools.DamageLowerEffect;
+import klk.warloise.corruptedevents.effects.armorandtools.DurabilityDrainEffect;
+import klk.warloise.corruptedevents.effects.armorandtools.HalfArmorEffect;
+import klk.warloise.corruptedevents.effects.armorandtools.PvpActivateEffect;
+import klk.warloise.corruptedevents.effects.lifeandhunger.HalfHungerEffect;
+import klk.warloise.corruptedevents.effects.lifeandhunger.HalfLifeEffect;
+import klk.warloise.corruptedevents.effects.lifeandhunger.HideLifeAndHungerEffect;
+import klk.warloise.corruptedevents.effects.movement.*;
+import klk.warloise.corruptedevents.effects.xp.HurtXpEffect;
+import klk.warloise.corruptedevents.effects.xp.ReverseXPGlichEffect;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraftforge.registries.DeferredRegister;
@@ -13,7 +22,7 @@ public class ModEffects {
     public static final DeferredRegister<MobEffect> MOB_EFFECTS = DeferredRegister.create(ForgeRegistries.MOB_EFFECTS, Corruptedevents.MODID);
 
     public static final RegistryObject<MobEffect> GLICHEFFECT = MOB_EFFECTS.register("glich",
-            () -> new GlichEffect(MobEffectCategory.BENEFICIAL, 0x98D982)); 
+            () -> new GlichEffect(MobEffectCategory.BENEFICIAL, 0x98D982));
     public static final RegistryObject<MobEffect> REVERSE_XP_GLICH = MOB_EFFECTS.register("reverse_xp_glitch",
             () -> new ReverseXPGlichEffect(MobEffectCategory.HARMFUL, 0xFF4500)); // Color naranja.
     public static final RegistryObject<MobEffect> RED_SCREEN_EFFECT = MOB_EFFECTS.register("red_screen",
@@ -39,11 +48,11 @@ public class ModEffects {
     public static final RegistryObject<MobEffect> BLACK_AND_WHITE_MODE = MOB_EFFECTS.register("black_and_white",
             () -> new BlackAndWhiteModeEffect(MobEffectCategory.HARMFUL, 0x808080));
     public static final RegistryObject<MobEffect> PIXELATE = MOB_EFFECTS.register("pixelate",
-            () -> new PixelateEffect(MobEffectCategory.HARMFUL, 0x808080)); 
+            () -> new PixelateEffect(MobEffectCategory.HARMFUL, 0x808080));
     public static final RegistryObject<MobEffect> CRT = MOB_EFFECTS.register("crt",
             () -> new CRTEffect(MobEffectCategory.HARMFUL, 0x808080)); 
     public static final RegistryObject<MobEffect> PVP_ACTIVATE = MOB_EFFECTS.register("pvp_activate",
-            () -> new PvpActivateEffect(MobEffectCategory.BENEFICIAL, 0xFF0000)); 
+            () -> new PvpActivateEffect(MobEffectCategory.BENEFICIAL, 0xFF0000));
     public static final RegistryObject<MobEffect> MINI = MOB_EFFECTS.register("mini",
             () -> new MiniEffect(MobEffectCategory.HARMFUL, 0x00FF00)); // Color verde
 }
