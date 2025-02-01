@@ -1,6 +1,8 @@
 package klk.warloise.corruptedevents;
 
 import com.mojang.logging.LogUtils;
+import klk.warloise.corruptedevents.events.HurtXpHandler;
+import klk.warloise.corruptedevents.events.ReverseXPGlichEventHandler;
 import klk.warloise.corruptedevents.registry.ModEffects;
 import klk.warloise.corruptedevents.client.BlackAndWhiteModeRenderer;
 import klk.warloise.corruptedevents.client.CRTRenderer;
@@ -78,6 +80,8 @@ public class Corruptedevents {
         public static void onServerSetup(FMLCommonSetupEvent event) {
             LOGGER.info("Corrupted Events - Servidor");
             MinecraftForge.EVENT_BUS.register(new PvpHandler());
+            MinecraftForge.EVENT_BUS.register(new ReverseXPGlichEventHandler());
+            MinecraftForge.EVENT_BUS.register(new HurtXpHandler());
             MinecraftForge.EVENT_BUS.register(new MiniEffect(null, 0));
         }
     }

@@ -12,10 +12,9 @@ import net.minecraftforge.api.distmarker.Dist;
 public class HideBarsEventHandler {
     @SubscribeEvent
     public static void onRenderGuiOverlay(RenderGuiOverlayEvent.Pre event) {
-        // Obtener el jugador actual
         Minecraft minecraft = Minecraft.getInstance();
         if (minecraft.player == null) {
-            return; // Asegurarse de que el jugador no sea nulo
+            return;
         }
 
         // Verificar si el jugador tiene el efecto HIDE_LIFE_AND_HUNGER_GLICH

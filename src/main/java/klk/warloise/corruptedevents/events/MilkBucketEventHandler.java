@@ -1,18 +1,15 @@
 package klk.warloise.corruptedevents.events;
 
 import klk.warloise.corruptedevents.registry.ModEffects;
-import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
+import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import klk.warloise.corruptedevents.client.GlichEffectRenderer;
-
-@Mod.EventBusSubscriber(modid = "corruptedevents", bus = Mod.EventBusSubscriber.Bus.FORGE)
+@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.FORGE, value = Dist.DEDICATED_SERVER)
 public class MilkBucketEventHandler {
 
     @SubscribeEvent

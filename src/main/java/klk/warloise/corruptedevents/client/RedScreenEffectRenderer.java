@@ -12,9 +12,6 @@ import net.minecraftforge.fml.common.Mod;
 @Mod.EventBusSubscriber(value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class RedScreenEffectRenderer {
     private static final Minecraft MC = Minecraft.getInstance();
-    private static long lastTriggerTime = 0; // Momento en que el glitch comenzó a mostrarse.
-    private static final int GLITCH_INTERVAL = 15 * 1000; // Intervalo de 15 segundos en milisegundos.
-    private static final int GLITCH_DURATION = 500; // Duración del glitch en milisegundos (0.5 segundos).
 
     @SubscribeEvent
     public static void onRenderGuiOverlay(RenderGuiOverlayEvent.Post event) {
