@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import klk.warloise.corruptedevents.events.effects.HurtXpHandler;
 import klk.warloise.corruptedevents.events.effects.ReverseXPGlichEventHandler;
 import klk.warloise.corruptedevents.registry.ModEffects;
+import klk.warloise.corruptedevents.client.glitch.UnifiedGlitchRenderer;
 import klk.warloise.corruptedevents.client.shaders.BlackAndWhiteModeRenderer;
 import klk.warloise.corruptedevents.client.shaders.CRTRenderer;
 import klk.warloise.corruptedevents.effects.movement.MiniEffect;
@@ -26,7 +27,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import org.slf4j.Logger;
 
-// The value here should match an entry in the META-INF/mods.toml file
+
 @Mod(Corruptedevents.MODID)
 public class Corruptedevents {
     public static final String MODID = "corruptedevents";
@@ -69,6 +70,7 @@ public class Corruptedevents {
             LOGGER.info("Corrupted Events - Cliente");
             MinecraftForge.EVENT_BUS.register(new BlackAndWhiteModeRenderer());
             MinecraftForge.EVENT_BUS.register(new CRTRenderer());
+            MinecraftForge.EVENT_BUS.register(new UnifiedGlitchRenderer());
         }
     }
 

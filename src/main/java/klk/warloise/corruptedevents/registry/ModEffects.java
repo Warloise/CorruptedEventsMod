@@ -24,19 +24,19 @@ public class ModEffects {
     public static final RegistryObject<MobEffect> GLICHEFFECT = MOB_EFFECTS.register("glich",
             () -> new GlichEffect(MobEffectCategory.BENEFICIAL, 0x98D982));
     public static final RegistryObject<MobEffect> REVERSE_XP_GLICH = MOB_EFFECTS.register("reverse_xp_glitch",
-            () -> new ReverseXPGlichEffect(MobEffectCategory.HARMFUL, 0xFF4500)); // Color naranja.
+            () -> new ReverseXPGlichEffect(MobEffectCategory.HARMFUL, 0xFF4500));
     public static final RegistryObject<MobEffect> RED_SCREEN_EFFECT = MOB_EFFECTS.register("red_screen",
-            () -> new RedScreenEffect(MobEffectCategory.NEUTRAL, 0xFF0000)); // Color base del efecto rojo.
+            () -> new RedScreenEffect(MobEffectCategory.NEUTRAL, 0xFF0000));
     public static final RegistryObject<MobEffect> HALF_LIFE_GLICH = MOB_EFFECTS.register("half_life",
-            () -> new HalfLifeEffect(MobEffectCategory.HARMFUL, 0xFF0000)); // Color base del efecto rojo.
+            () -> new HalfLifeEffect(MobEffectCategory.HARMFUL, 0xFF0000));
     public static final RegistryObject<MobEffect> HALF_HUNGER_GLICH = MOB_EFFECTS.register("half_hunger",
-            () -> new HalfHungerEffect(MobEffectCategory.HARMFUL, 0xFF0000)); // Color base del efecto rojo.
+            () -> new HalfHungerEffect(MobEffectCategory.HARMFUL, 0xFF0000));
     public static final RegistryObject<MobEffect> HIDE_LIFE_AND_HUNGER_GLICH = MOB_EFFECTS.register("hide_life_and_hunger",
-            () -> new HideLifeAndHungerEffect(MobEffectCategory.NEUTRAL, 0xFF0000)); // Color base del efecto rojo.
+            () -> new HideLifeAndHungerEffect(MobEffectCategory.NEUTRAL, 0xFF0000)); 
     public static final RegistryObject<MobEffect> DURABILITY_DRAIN_EFFECT_GLICH = MOB_EFFECTS.register("durability_drain",
-            () -> new DurabilityDrainEffect(MobEffectCategory.NEUTRAL, 0xFF0000)); // Color base del efecto rojo.
+            () -> new DurabilityDrainEffect(MobEffectCategory.NEUTRAL, 0xFF0000));
     public static final RegistryObject<MobEffect> HALF_ARMOR_EFFECT = MOB_EFFECTS.register("half_armor",
-            () -> new HalfArmorEffect(MobEffectCategory.HARMFUL, 0xFF0000)); // Color base del efecto rojo.
+            () -> new HalfArmorEffect(MobEffectCategory.HARMFUL, 0xFF0000)); 
     public static final RegistryObject<MobEffect> INVERTED_CONTROLS = MOB_EFFECTS.register("inverted_controls",
             () -> new InvertedControlsEffect(MobEffectCategory.HARMFUL, 0xFF3450));
     public static final RegistryObject<MobEffect> HURT_XP = MOB_EFFECTS.register("hurt_xp",
@@ -54,5 +54,5 @@ public class ModEffects {
     public static final RegistryObject<MobEffect> PVP_ACTIVATE = MOB_EFFECTS.register("pvp_activate",
             () -> new PvpActivateEffect(MobEffectCategory.BENEFICIAL, 0xFF0000));
     public static final RegistryObject<MobEffect> MINI = MOB_EFFECTS.register("mini",
-            () -> new MiniEffect(MobEffectCategory.HARMFUL, 0x00FF00)); // Color verde
+            () -> new MiniEffect(MobEffectCategory.HARMFUL, 0x00FF00)); 
 }
